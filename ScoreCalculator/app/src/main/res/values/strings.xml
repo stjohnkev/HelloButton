@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ScoreCalculator</string>
+    <string name="message_start">Count=0</string>
+    <string name="message_format">%d Colour Points</string>
+    <string name="message_format1">%d wb Points</string>
+    <string name="message_format2">%d Points</string>
+    <string name="FixThree">3 FIXES</string>
+    <string name="FixTwo">2 FIXES</string>
+    <string name="FixOne">1 FIX</string>
+    <string name="FixZero">0 FIX</string>
+    <string name="message_top">Colour Identification</string>
+    <string name="colour_points">0 Colour points</string>
+    <string name="distance_label_val">Distance from cones</string>
+    <string name="UpdateButton">Update</string>
+    <string name="wb_message">(WB)mission</string>
+    <string name="wb_points">0 WB points</string>
+    <string name="WBFailure">WB Failure</string>
+    <string name="WBSuccess">WB Success</string>
+    <string name="final_score">0 points</string>
+    <string name="reset">Reset</string>
+</resources>

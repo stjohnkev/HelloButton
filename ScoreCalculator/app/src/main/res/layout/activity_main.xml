@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/colour_label"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_top"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/colour_points"
+        android:layout_toRightOf="@+id/colour_label"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/colour_points"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:gravity="right"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_below="@id/colour_label"
+        >
+
+        <Button
+            android:id="@+id/fixOne"
+            android:onClick="click3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/FixThree"
+            />
+        <Button
+            android:id="@+id/fixTwo"
+            android:onClick="click2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/FixTwo"
+            />
+        <Button
+            android:onClick="click1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/FixOne"
+            />
+        <Button
+            android:onClick="click0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/FixZero"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/distance_label"
+        android:layout_below="@id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_label_val"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:gravity="left"
+
+
+        />
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/distance_label"
+        android:stretchColumns="0,1,2"
+        android:layout_margin="1dp"
+        android:id="@+id/tableContainer"
+        >
+
+        <TableRow
+            android:background="#C0C0C0"
+            android:layout_width="fill_parent"
+            >
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <TextView
+                android:text="Distance (FT)"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+
+                />
+            <TextView
+                android:text="Points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                />
+        </TableRow>
+        <TableRow
+            android:background="#ffffff"
+            >
+            <TextView
+                android:text="Near Ball"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <EditText
+                android:id="@+id/near_input"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/near"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="#ffffff"
+            >
+            <TextView
+                android:text="Far Ball"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <EditText
+                android:id="@+id/far_input"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_column="2"/>
+
+            <TextView
+                android:text="0"
+                android:id="@+id/far"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="#ffffff"
+            >
+            <TextView
+                android:text="Robot Home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                />
+            <EditText
+                android:id="@+id/robot_input"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_column="2"/>
+
+            <TextView
+                android:id="@+id/robot"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:onClick="distancePoints"
+                android:id="@+id/UpdateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/UpdateButton"
+
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/wb_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/wb_message"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:layout_column="1"
+                />
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                />
+
+            <TextView
+                android:id="@+id/wb_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/wb_points"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:layout_column="3"
+
+
+                />
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:onClick="WBNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/WBFailure"
+                android:layout_column="1"
+
+                />
+            <TextView
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                />
+
+            <Button
+                android:onClick="WBYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/WBSuccess"
+                android:layout_column="3"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/total_points"
+                android:text="@string/final_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:textSize="26sp"
+
+                />
+
+        </TableRow>
+        <TableRow>
+            <Button
+                android:onClick="reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset"
+                />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
